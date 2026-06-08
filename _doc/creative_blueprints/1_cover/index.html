@@ -1,0 +1,75 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait  .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 54%; }
+  .mode-portrait  .sl-content { width: 100%; padding: 2rem; }
+  .mode-landscape .sl-visual  { width: 46%; }
+  .mode-portrait  .sl-visual  { width: 100%; min-height: 10rem; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: brand + headline + attribution -->
+    <div class="sl-content flex flex-col justify-between p-10">
+
+      <!-- Logo mark -->
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-indigo-700 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="3.5" fill="white"/>
+            <path d="M10 2v2.5M10 15.5V18M2 10h2.5M15.5 10H18M4.39 4.39l1.77 1.77M13.84 13.84l1.77 1.77M15.61 4.39l-1.77 1.77M6.16 13.84l-1.77 1.77" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="font-bold text-indigo-900 text-lg tracking-tight">InterviewLens</span>
+      </div>
+
+      <!-- Headline block -->
+      <div>
+        <div class="inline-block bg-violet-100 text-violet-700 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase mb-5">
+          AI Interview Analysis
+        </div>
+        <h1 class="text-5xl font-black text-slate-900 leading-tight tracking-tight mb-4">
+          Hire with clarity,<br>not guesswork.
+        </h1>
+        <p class="text-base text-slate-600 leading-relaxed max-w-xs">
+          InterviewLens automatically transcribes, scores, and summarises every candidate interview — so your team makes faster, fairer hiring decisions.
+        </p>
+      </div>
+
+      <!-- Attribution -->
+      <data-attribution />
+    </div>
+
+    <!-- Right: visual panel -->
+    <div class="sl-visual relative overflow-hidden bg-indigo-950 flex flex-col justify-end">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=AI%20video%20interview%20analysis%20platform%20dashboard%20dark%20UI%20candidate%20scoring%20analytics%20modern%20professional%20SaaS"
+        class="absolute inset-0 w-full h-full object-cover opacity-50"
+        alt="InterviewLens analysis dashboard"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-indigo-900 to-violet-900 opacity-65"></div>
+
+      <!-- Floating stat card -->
+      <div class="relative z-10 m-8 bg-white rounded-2xl p-5 shadow-xl">
+        <div class="flex justify-around items-center">
+          <div class="text-center">
+            <div class="text-3xl font-black text-indigo-700">70%</div>
+            <div class="text-xs text-slate-500 mt-0.5 font-medium">Time saved</div>
+          </div>
+          <div class="w-px h-10 bg-slate-200"></div>
+          <div class="text-center">
+            <div class="text-3xl font-black text-indigo-700">3×</div>
+            <div class="text-xs text-slate-500 mt-0.5 font-medium">Faster decisions</div>
+          </div>
+          <div class="w-px h-10 bg-slate-200"></div>
+          <div class="text-center">
+            <div class="text-3xl font-black text-indigo-700">100%</div>
+            <div class="text-xs text-slate-500 mt-0.5 font-medium">Consistent scoring</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
